@@ -1,0 +1,91 @@
+<template>
+    <div class="dashboard-container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Property Availability Board</h1>
+            <p>Live unit status across all properties</p>
+
+            <div class="legend">
+                <span class="dot available"></span> Available
+                <span class="dot low"></span> Low (&lt;30%)
+                <span class="dot sold"></span> Sold Out
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="property-grid">
+
+            <template for:each={properties} for:item="property">
+
+                <div
+                    key={property.id}
+                    class={property.cardClass}>
+
+                    <!-- Card Header -->
+                    <div class="card-header">
+
+                        <h2>{property.name}</h2>
+
+                        <span class={property.badgeClass}>
+                            {property.status}
+                        </span>
+
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="stats">
+
+                        <div class="stat">
+                            <div class="value">
+                                {property.total}
+                            </div>
+                            <div class="label">
+                                TOTAL
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="stat">
+                            <div class="value blue">
+                                {property.available}
+                            </div>
+                            <div class="label">
+                                AVAIL
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="stat">
+                            <div class="value">
+                                {property.soldPercent}%
+                            </div>
+                            <div class="label">
+                                SOLD
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Progress -->
+                    <div class="progress-container">
+                        <div
+                            class={property.progressClass}
+                            style={property.progressStyle}>
+                        </div>
+                    </div>
+
+                    <div class="sold-text">
+                        {property.sold} of {property.total} sold
+                    </div>
+
+                </div>
+
+            </template>
+
+        </div>
+
+    </div>
+</template>

@@ -1,0 +1,176 @@
+.dashboard-container {
+    background: #1f1f1f;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.header p {
+    color: #bdbdbd;
+    margin-bottom: 16px;
+}
+
+.legend {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 24px;
+    color: #d0d0d0;
+    font-weight: 600;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.available {
+    background: #58a55c;
+}
+
+.low {
+    background: #d68a32;
+}
+
+.sold {
+    background: #c62828;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    gap: 20px;
+}
+
+.property-card {
+    background: #2c2c2c;
+    border-radius: 18px;
+    padding: 20px;
+    border: 1px solid #4a4a4a;
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-3px);
+}
+
+.property-card.available {
+    border-left: 5px solid #58a55c;
+}
+
+.property-card.low {
+    border-left: 5px solid #d68a32;
+}
+
+.property-card.sold {
+    border-left: 5px solid #c62828;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.card-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.badge {
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.available-badge {
+    background: #e6f4ea;
+    color: #2f6b37;
+}
+
+.low-badge {
+    background: #fff2df;
+    color: #b06a00;
+}
+
+.sold-badge {
+    background: #fde8e8;
+    color: #b42318;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+}
+
+.value {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.blue {
+    color: #3b82f6;
+}
+
+.label {
+    color: #bdbdbd;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.divider {
+    width: 1px;
+    height: 48px;
+    background: #555;
+}
+
+.progress-container {
+    margin-top: 18px;
+    height: 10px;
+    background: #1a1a1a;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.available-progress {
+    background: #58a55c;
+}
+
+.low-progress {
+    background: #d68a32;
+}
+
+.sold-progress {
+    background: #c62828;
+}
+
+.sold-text {
+    margin-top: 8px;
+    text-align: right;
+    color: #d0d0d0;
+    font-size: 14px;
+    font-weight: 600;
+}
