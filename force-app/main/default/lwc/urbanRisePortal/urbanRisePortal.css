@@ -1,0 +1,13 @@
+:host {
+    display: block;
+}
+
+c-urban-rise-hero,
+c-urban-rise-about,
+c-urban-rise-properties,
+c-urban-rise-contact
+c-urban-rise-footer {
+    display: block;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,176 @@
+:host{
+    display:block;
+    background:#f8f5ef;
+    color:#231711;
+}
+
+/* HERO */
+
+.hero-section{
+    text-align:center;
+    padding:100px 20px;
+    border-bottom:1px solid #ddd1b2;
+}
+
+.small-title{
+    color:#b89745;
+    letter-spacing:8px;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.hero-section h1{
+    font-size:80px;
+    margin:0;
+}
+
+.gold-text{
+    color:#b89745;
+}
+
+.hero-section p{
+    color:#a08d70;
+    font-size:26px;
+}
+
+/* SECTION */
+
+.section-title{
+    color:#b89745;
+    letter-spacing:5px;
+    margin-bottom:30px;
+}
+
+.contact-wrapper,
+.message-section,
+.office-section{
+    max-width:1400px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+/* CARDS */
+
+.contact-card,
+.message-card,
+.office-card{
+    background:white;
+    border:1px solid #ddd1b2;
+    padding:40px;
+}
+
+.contact-card h2,
+.message-card h2{
+    font-size:48px;
+}
+
+.contact-card span,
+.message-card span{
+    color:#b89745;
+}
+
+.sub-text{
+    color:#9a8a73;
+    font-style:italic;
+}
+
+hr{
+    border:none;
+    border-top:1px solid #ddd1b2;
+    margin:30px 0;
+}
+
+/* INFO */
+
+.info-item{
+    display:flex;
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.icon{
+    width:40px;
+    height:40px;
+    border:1px solid #ddd1b2;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.info-item label{
+    color:#b89745;
+    letter-spacing:3px;
+    font-size:12px;
+}
+
+.status-box{
+    margin-top:40px;
+    display:inline-block;
+    border:1px solid #ddd1b2;
+    padding:12px 20px;
+    color:#5aa469;
+}
+
+/* FORM */
+
+.form-grid{
+    display:grid;
+    gap:25px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:18px;
+    border:1px solid #ddd1b2;
+    background:#fff;
+    font-size:16px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    letter-spacing:3px;
+    font-size:12px;
+    color:#9a8a73;
+}
+
+.send-btn{
+    width:100%;
+    margin-top:35px;
+    padding:20px;
+
+    border:none;
+
+    background:#a88b43;
+    color:white;
+
+    letter-spacing:4px;
+    cursor:pointer;
+}
+
+/* OFFICE */
+
+.office-card h2{
+    font-size:50px;
+}
+
+.office-card a{
+    display:inline-block;
+    margin:20px 0;
+    color:#b89745;
+    text-decoration:none;
+}
+
+.hours-grid{
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:20px;
+}

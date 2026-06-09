@@ -1,0 +1,85 @@
+<template>
+
+    <section class="property-section">
+
+        <div class="section-heading">
+            <span>◆</span>
+            <span>FEATURED PROPERTIES</span>
+            <span>◆</span>
+        </div>
+
+        <div class="property-grid">
+
+            <template for:each={properties} for:item="property">
+
+                <div key={property.Id} class="property-card">
+
+                    <!-- Badge -->
+
+                    <div class="badge">
+                        {property.Status__c}
+                    </div>
+
+                    <!-- Placeholder Image -->
+
+                    <div class="property-image">
+
+                        <lightning-icon
+                            icon-name="utility:home"
+                            size="large">
+                        </lightning-icon>
+
+                    </div>
+
+                    <!-- Location -->
+
+                    <div class="location">
+                        📍 {property.Location__c}
+                    </div>
+
+                    <!-- Property Name -->
+
+                    <h2>{property.Property_Name__c}</h2>
+
+                    <!-- Description -->
+
+                    <p>
+                        Premium real estate investment opportunity.
+                    </p>
+
+                    <!-- Stats -->
+
+                    <div class="stats">
+
+                        <div>
+                            <strong>{property.Available_Units__c}</strong>
+                            <span>Available</span>
+                        </div>
+
+                        <div>
+                            <strong>{property.Total_Units__c}</strong>
+                            <span>Total Units</span>
+                        </div>
+
+                        <div>
+                            <strong>{property.Status__c}</strong>
+                            <span>Status</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Price -->
+
+                    <div class="price">
+                        ₹{property.formattedPrice}
+                    </div>
+
+                </div>
+
+            </template>
+
+        </div>
+
+    </section>
+
+</template>

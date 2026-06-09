@@ -1,0 +1,69 @@
+<template>
+    <div class="page-container">
+
+        <!-- HEADER -->
+        <header class="navbar">
+
+            <div class="logo-section">
+                <div class="logo-box">U</div>
+
+                <div class="logo-text">
+                    <h2>UrbanRise</h2>
+                    <span>REALTY</span>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <button class="nav-btn">HOME</button>
+                <a href="/properties">
+                    <button class="nav-btn">PROPERTIES</button>
+                </a>
+                <a href="/contact-us">
+                    <button class="nav-btn">CONTACT US</button>
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <button
+                    class="tour-btn"
+                    onclick={handleBookTour}>
+                    BOOK A TOUR
+                </button>
+            </div>
+
+        </header>
+
+        <!-- HERO SECTION -->
+
+        <div class="hero-section">
+
+            <div class="hero-content">
+
+                <div class="small-title">
+                    ✦ PREMIUM REAL ESTATE ACROSS INDIA ✦
+                </div>
+
+                <h1>
+                    Find Your <br />
+                    <span class="gold-text">Dream Home</span><br />
+                    Today
+                </h1>
+
+                <p>
+                    Browse premium properties across India
+                </p>
+
+                <button
+                    class="explore-btn"
+                    onclick={handleExplore}>
+
+                    EXPLORE PROPERTIES
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</template>

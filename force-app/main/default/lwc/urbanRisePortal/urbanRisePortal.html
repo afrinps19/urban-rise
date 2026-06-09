@@ -1,0 +1,48 @@
+<template>
+
+    
+    <section id="home">
+
+        <c-urban-rise-hero
+            onexploreproperties={scrollToProperties}
+            onbooktour={scrollToContact}>
+        </c-urban-rise-hero>
+
+    </section>
+    <!-- Luxury Banner -->
+
+    <section class="banner-section">
+
+        <img
+            src={HomeBanner} 
+            alt="Luxury Property"
+            class="banner-image"
+        />
+
+    </section>
+
+    <section id="about">
+        <c-urban-rise-about></c-urban-rise-about>
+    </section>
+
+    <section
+        class="properties-section">
+
+        <c-urban-rise-properties>
+        </c-urban-rise-properties>
+
+    </section>
+
+
+    <section
+        id="contact"
+        class="contact-section">
+
+        <c-urban-rise-contact>
+        </c-urban-rise-contact>
+
+    </section>
+
+    <c-urban-rise-footer></c-urban-rise-footer>
+
+</template>

@@ -1,0 +1,343 @@
+:host {
+    display:block;
+    background:#f8f5ef;
+}
+
+/* HERO */
+
+.hero-section{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.small-title{
+    color:#b89745;
+    letter-spacing:5px;
+    margin-bottom:20px;
+}
+
+.hero-section h1{
+    font-size:72px;
+    color:#231711;
+}
+
+.gold-text{
+    color:#b89745;
+}
+
+.hero-section p{
+    color:#9d8a6b;
+    font-size:24px;
+}
+
+/* SEARCH */
+
+.search-section{
+    border-top:1px solid #ddd1b2;
+    border-bottom:1px solid #ddd1b2;
+    padding:40px;
+}
+
+.search-box{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+}
+
+.search-box input{
+    flex:1;
+    padding:20px;
+    border:1px solid #ddd1b2;
+    font-size:18px;
+}
+
+.search-btn{
+    width:180px;
+    border:none;
+    background:#a88b43;
+    color:white;
+    letter-spacing:3px;
+    cursor:pointer;
+}
+
+/* TITLE */
+
+.section-title{
+    max-width:1400px;
+    margin:60px auto 30px;
+    color:#b89745;
+    letter-spacing:5px;
+    padding:0 20px;
+}
+
+/* GRID */
+
+.property-grid{
+    max-width:1400px;
+    margin:auto;
+    padding:0 20px 80px;
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(420px,1fr));
+
+    gap:30px;
+}
+
+/* CARD */
+
+.property-card{
+    border:1px solid #ddd1b2;
+    background:white;
+}
+
+.image-section{
+    position:relative;
+    height:350px;
+    overflow:hidden;
+}
+
+.property-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.status-badge{
+    position:absolute;
+    top:25px;
+    left:25px;
+
+    background:#a88b43;
+    color:white;
+
+    padding:10px 18px;
+
+    font-size:12px;
+    letter-spacing:2px;
+
+    z-index:5;
+}
+
+.card-content{
+    padding:35px;
+}
+
+.card-content h2{
+    font-size:42px;
+    color:#231711;
+}
+
+.location{
+    color:#9b7d4d;
+}
+
+.property-stats{
+    display:flex;
+    justify-content:space-between;
+    margin:25px 0;
+}
+
+.property-stats span{
+    display:block;
+    color:#999;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.property-stats strong{
+    font-size:24px;
+}
+
+.details-btn{
+    width:100%;
+    padding:18px;
+    background:white;
+    border:1px solid #555;
+
+    letter-spacing:4px;
+    cursor:pointer;
+}
+
+/* MODAL */
+
+.backdrop{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:1000;
+}
+
+.modal{
+
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    width:700px;
+    max-width:95%;
+
+    background:white;
+
+    z-index:1001;
+}
+
+.modal-header{
+
+    background:#1f130d;
+
+    color:#b89745;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:30px;
+}
+
+.close-icon{
+
+    background:none;
+    border:1px solid #555;
+
+    color:white;
+
+    width:40px;
+    height:40px;
+
+    cursor:pointer;
+}
+
+.modal-body{
+    padding:40px;
+}
+
+.modal-body h1{
+    font-size:56px;
+}
+
+.modal-location{
+    color:#9b7d4d;
+}
+
+.modal-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:30px;
+
+    margin:30px 0;
+}
+
+.modal-grid span{
+    display:block;
+    color:#999;
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+.modal-grid strong{
+    font-size:30px;
+}
+
+.status-text{
+    color:#2b8f57;
+}
+
+.book-btn{
+
+    width:100%;
+
+    background:#a88b43;
+
+    color:white;
+
+    border:none;
+
+    padding:18px;
+
+    letter-spacing:3px;
+
+    cursor:pointer;
+
+    margin-bottom:15px;
+}
+
+.close-btn{
+
+    width:100%;
+
+    padding:18px;
+
+    background:white;
+
+    border:1px solid #ddd1b2;
+
+    cursor:pointer;
+}
+
+.no-records{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#777;
+
+    font-size:20px;
+}
+
+/* SITE VISIT MODAL */
+
+.visit-modal {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+    max-width: 95%;
+
+    background: white;
+
+    padding: 30px;
+
+    z-index: 1002;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.visit-modal h2 {
+
+    margin-bottom: 10px;
+
+    color: #231711;
+}
+
+.visit-modal p {
+
+    color: #9b7d4d;
+
+    margin-bottom: 20px;
+}
+
+.btn-row {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    gap: 10px;
+}

@@ -1,0 +1,77 @@
+<template>
+
+    <section class="contact-section">
+
+        <div class="section-heading">
+            <span>◆</span>
+            <span>ENQUIRY</span>
+            <span>◆</span>
+        </div>
+
+        <div class="contact-container">
+
+            <!-- Left Side -->
+
+            <div class="contact-info">
+
+                <h2>Get in Touch</h2>
+
+                <div class="info-item">
+                    <div class="icon-box">☎</div>
+
+                    <div>
+                        <div class="label">PHONE</div>
+                        <p>+91 98765 43210</p>
+                        <p>+91 11 4567 8900</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon-box">✉</div>
+
+                    <div>
+                        <div class="label">EMAIL</div>
+                        <p>concierge@urbanriserealty.in</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="enquiry-form">
+
+                <h2>Request a Private Viewing</h2>
+
+                <input
+                    type="text"
+                    placeholder="Your Full Name"
+                    value={fullName}
+                    onchange={handleName}
+                />
+
+                <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    value={phone}
+                    onchange={handlePhone}
+                />
+
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                    value={email}
+                    onchange={handleEmail}
+                />
+
+                <button onclick={handleSubmit}>
+                    REQUEST VIEWING
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</template>

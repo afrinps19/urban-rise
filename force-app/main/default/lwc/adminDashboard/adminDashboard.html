@@ -1,0 +1,164 @@
+<template>
+
+    <div class="dashboard-wrap">
+
+        <!-- HEADER -->
+        <div class="dashboard-header">
+
+            <div class="eyebrow">
+                UrbanRise Realty
+            </div>
+
+            <h1>
+                Admin <span>Dashboard</span>
+            </h1>
+
+            <div class="date-box">
+                {currentDate}
+            </div>
+
+        </div>
+
+        <!-- STATS -->
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="label">Total Properties</div>
+                <div class="value">{dashboard.totalProperties}</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="label">Total Enquiries</div>
+                <div class="value">{dashboard.totalEnquiries}</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="label">Total Units</div>
+                <div class="value">{dashboard.totalUnits}</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="label">Available Units</div>
+                <div class="value gold">{dashboard.availableUnits}</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="label">Revenue</div>
+                <div class="value gold">₹{dashboard.totalRevenue}</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="label">Pending Invoices</div>
+                <div class="value">{dashboard.pendingInvoices}</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="label">Site Visits</div>
+                <div class="value">{dashboard.totalSiteVisits}</div>
+            </div>
+
+        </div>
+
+        <!-- RECENT LEADS -->
+        <div class="section-title">Recent Enquiries</div>
+
+        <div class="table-card">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <template if:true={dashboard.leads}>
+                        <template for:each={dashboard.leads} for:item="lead">
+                            <tr key={lead.Id}>
+                                <td>{lead.Name}</td>
+                                <td>{lead.Email__c}</td>
+                                <td>{lead.Phone__c}</td>
+                                <td>{lead.Status__c}</td>
+                            </tr>
+                        </template>
+                    </template>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- SITE VISITS -->
+        <div class="section-title">Upcoming Site Visits</div>
+
+        <div class="table-card">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Buyer</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <template if:true={dashboard.siteVisits}>
+                        <template for:each={dashboard.siteVisits} for:item="visit">
+                            <tr key={visit.Id}>
+                                <td>{visit.Buyer__r.Name}</td>
+                                <td>{visit.Visit_Date__c}</td>
+                                <td>{visit.Status__c}</td>
+                            </tr>
+                        </template>
+                    </template>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- PROPERTIES -->
+        <div class="section-title">Property Availability</div>
+
+        <div class="table-card">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Location</th>
+                        <th>Total Units</th>
+                        <th>Available</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <template if:true={dashboard.properties}>
+                        <template for:each={dashboard.properties} for:item="property">
+                            <tr key={property.Id}>
+                                <td>{property.Property_Name__c}</td>
+                                <td>{property.Location__c}</td>
+                                <td>{property.Total_Units__c}</td>
+                                <td>{property.Available_Units__c}</td>
+                            </tr>
+                        </template>
+                    </template>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</template>

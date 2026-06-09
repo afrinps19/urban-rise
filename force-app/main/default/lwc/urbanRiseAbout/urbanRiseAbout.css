@@ -1,0 +1,125 @@
+:host {
+    display: block;
+}
+
+.about-section {
+    background: #faf9f7;
+    padding: 80px 60px 120px;
+}
+
+/* Heading */
+
+.section-title {
+    text-align: center;
+
+    color: #b89745;
+
+    font-size: 12px;
+    letter-spacing: 8px;
+
+    margin-bottom: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.diamond {
+    font-size: 12px;
+}
+
+/* Layout */
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+/* Left Side */
+
+.about-left {
+    flex: 1;
+}
+
+.experience {
+    margin-bottom: 60px;
+}
+
+.years {
+    display: block;
+
+    font-size: 110px;
+    line-height: 1;
+
+    color: #ece3ca;
+    font-weight: 500;
+}
+
+.years-text {
+    margin-top: 10px;
+
+    color: #b89745;
+
+    letter-spacing: 6px;
+    font-size: 12px;
+}
+
+/* Stats */
+
+.stats-container {
+    display: flex;
+    gap: 30px;
+}
+
+.stat-card {
+    width: 140px;
+    height: 110px;
+
+    border: 1px solid #e2d6b6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+}
+
+.stat-card h3 {
+    margin: 0;
+
+    color: #b89745;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.stat-card p {
+    margin-top: 10px;
+
+    color: #b9a67a;
+
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+/* Right Side */
+
+.about-right {
+    width: 420px;
+}
+
+.about-right p {
+    color: #5f5344;
+
+    font-size: 18px;
+    line-height: 2.1;
+
+    font-weight: 300;
+}
+
+.highlight {
+    color: #b89745;
+}

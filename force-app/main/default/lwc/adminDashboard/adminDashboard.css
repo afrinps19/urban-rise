@@ -1,0 +1,160 @@
+:host{
+    display:block;
+    background:#f5f0e8;
+    min-height:100vh;
+    padding:40px;
+    font-family:'Montserrat', sans-serif;
+}
+
+/* WRAPPER */
+.dashboard-wrap{
+    max-width:1400px;
+    margin:auto;
+}
+
+/* HEADER */
+.dashboard-header{
+    margin-bottom:40px;
+}
+
+.dashboard-header .eyebrow{
+    font-family:'Montserrat', sans-serif;
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#a88b43;
+}
+
+/* MAIN TITLE */
+.dashboard-header h1{
+    font-family:'Playfair Display', serif;
+    font-size:64px;
+    color:#1f130d;
+    font-weight:600;
+    margin-top:10px;
+}
+
+.dashboard-header h1 span{
+    color:#a88b43;
+}
+
+/* KPI GRID */
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-bottom:50px;
+}
+
+/* STAT CARD */
+.stat-card{
+    background:white;
+    border:1px solid #d8c9a2;
+    padding:30px;
+    transition:all .3s ease;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* LABEL */
+.label{
+    font-size:11px;
+    letter-spacing:3px;
+    color:#8d7c58;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+/* VALUE */
+.value{
+    font-size:42px;
+    color:#1f130d;
+    font-weight:700;
+}
+
+/* GOLD VALUE */
+.gold{
+    color:#a88b43;
+}
+
+/* REVENUE SPECIAL SIZE */
+.value.revenue{
+    font-size:30px;
+}
+
+/* SECTION TITLE (IMPORTANT FIXED TYPOGRAPHY) */
+.section-title{
+    font-family:'Montserrat', sans-serif;
+    color:#a88b43;
+    letter-spacing:5px;
+    margin:40px 0 20px;
+    font-size:18px;
+    font-weight:600;
+    text-transform:uppercase;
+    position:relative;
+}
+
+/* optional luxury underline like your reference */
+.section-title::after{
+    content:'';
+    display:block;
+    width:60px;
+    height:1px;
+    background:#d8c9a2;
+    margin-top:8px;
+}
+
+/* TABLE CARD */
+.table-card{
+    background:white;
+    border:1px solid #d8c9a2;
+    overflow:hidden;
+    margin-bottom:40px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+thead{
+    background:#efe6d2;
+}
+
+th{
+    padding:18px;
+    text-align:left;
+    color:#7d6a4f;
+    letter-spacing:2px;
+    font-size:11px;
+    text-transform:uppercase;
+}
+
+td{
+    padding:18px;
+    border-top:1px solid #eee;
+    color:#2c1f18;
+}
+
+tr{
+    transition:background .2s ease;
+}
+
+tr:hover{
+    background:#faf7f1;
+}
+
+/* BADGE */
+.badge{
+    background:#a88b43;
+    color:white;
+    padding:6px 12px;
+    font-size:11px;
+    letter-spacing:1px;
+    border-radius:2px;
+}

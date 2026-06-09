@@ -1,0 +1,322 @@
+<template>
+
+    <!-- HERO -->
+
+    <section class="hero-section">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                ✦ PREMIUM REAL ESTATE ACROSS INDIA ✦
+            </div>
+
+            <h1>
+                Available
+                <span class="gold-text">
+                    Properties
+                </span>
+            </h1>
+
+            <p>
+                Explore Premium Properties Across India
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SEARCH -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search by property name or location..."
+                onchange={handleSearchKey}
+                onkeyup={handleEnter}
+            />
+
+            <button
+                class="search-btn"
+                onclick={handleSearch}>
+
+                SEARCH
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION TITLE -->
+
+    <div class="section-title">
+        AVAILABLE PROPERTIES
+    </div>
+
+    <!-- PROPERTY CARDS -->
+
+    <div class="property-grid">
+
+        <template
+            for:each={filteredProperties}
+            for:item="property">
+
+            <div
+                key={property.Id}
+                class="property-card">
+
+                <!-- IMAGE -->
+
+                <div class="image-section">
+
+                    <div class="status-badge">
+                        {property.Status__c}
+                    </div>
+
+                    <img
+                        src={property.Property_Image__c}
+                        alt={property.Property_Name__c}
+                        class="property-image"
+                    />
+
+                </div>
+
+                <!-- DETAILS -->
+
+                <div class="card-content">
+
+                    <h2>
+                        {property.Property_Name__c}
+                    </h2>
+
+                    <p class="location">
+                        📍 {property.Location__c}
+                    </p>
+
+                    <hr />
+
+                    <div class="property-stats">
+
+                        <div>
+
+                            <span>
+                                AVAILABLE UNITS
+                            </span>
+
+                            <strong>
+                                {property.Available_Units__c}
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PRICE PER UNIT
+                            </span>
+
+                            <strong>
+                                ₹ {property.Price_Per_Unit__c}
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="details-btn"
+                        data-id={property.Id}
+                        onclick={handleViewDetails}>
+
+                        VIEW DETAILS
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </template>
+
+    </div>
+
+    <!-- NO RECORDS -->
+
+    <template if:false={filteredProperties.length}>
+
+        <div class="no-records">
+
+            ✦ No Properties Found ✦
+
+            <p>
+                Try searching with a different property name or location.
+            </p>
+
+        </div>
+
+    </template>
+
+    <!-- PROPERTY DETAILS MODAL -->
+
+    <template if:true={showModal}>
+
+        <div
+            class="backdrop"
+            onclick={closeModal}>
+        </div>
+
+        <div class="modal">
+
+            <div class="modal-header">
+
+                <span>
+                    PROPERTY DETAILS
+                </span>
+
+                <button
+                    class="close-icon"
+                    onclick={closeModal}>
+
+                    ✕
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <h1>
+                    {selectedProperty.Property_Name__c}
+                </h1>
+
+                <p class="modal-location">
+                    📍 {selectedProperty.Location__c}
+                </p>
+
+                <hr />
+
+                <div class="modal-grid">
+
+                    <div>
+
+                        <span>
+                            AVAILABLE UNITS
+                        </span>
+
+                        <strong>
+                            {selectedProperty.Available_Units__c}
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL UNITS
+                        </span>
+
+                        <strong>
+                            {selectedProperty.Total_Units__c}
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            PRICE PER UNIT
+                        </span>
+
+                        <strong>
+                            ₹ {selectedProperty.Price_Per_Unit__c}
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            STATUS
+                        </span>
+
+                        <strong class="status-text">
+                            {selectedProperty.Status__c}
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="book-btn"
+                    onclick={handleBookTour}>
+
+                    ✦ BOOK A TOUR
+
+                </button>
+
+                <button
+                    class="close-btn"
+                    onclick={closeModal}>
+
+                    CLOSE
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </template>
+
+    <!-- SITE VISIT MODAL -->
+
+    <template if:true={showVisitModal}>
+
+        <div class="backdrop"></div>
+
+        <div class="visit-modal">
+
+            <h2>
+                Schedule Site Visit
+            </h2>
+
+            <p>
+                {selectedProperty.Property_Name__c}
+            </p>
+
+            <lightning-input
+                type="date"
+                label="Visit Date"
+                value={visitDate}
+                onchange={handleVisitDate}>
+            </lightning-input>
+
+            <div class="btn-row">
+
+                <button
+                    class="book-btn"
+                    onclick={saveSiteVisit}>
+
+                    CONFIRM BOOKING
+
+                </button>
+
+                <button
+                    class="close-btn"
+                    onclick={closeVisitModal}>
+
+                    CANCEL
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </template>
+
+</template>

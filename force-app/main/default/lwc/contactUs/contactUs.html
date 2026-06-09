@@ -1,0 +1,262 @@
+<template>
+
+    <!-- HERO -->
+
+    <section class="hero-section">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                ✦ WE'D LOVE TO HEAR FROM YOU ✦
+            </div>
+
+            <h1>
+                Contact
+                <span class="gold-text">Us</span>
+            </h1>
+
+            <p>
+                We're Here To Help You Find Your Dream Property
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT INFO -->
+
+    <section class="contact-wrapper">
+
+        <div class="section-title">
+            GET IN TOUCH
+        </div>
+
+        <div class="contact-card">
+
+            <h2>
+                Contact <span>Information</span>
+            </h2>
+
+            <p class="sub-text">
+                Reach out — we respond within 24 hours.
+            </p>
+
+            <hr />
+
+            <div class="info-item">
+                <div class="icon">✉</div>
+
+                <div>
+                    <label>EMAIL</label>
+                    <p>support@urbanrise.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon">☎</div>
+
+                <div>
+                    <label>PHONE</label>
+                    <p>+91 98765 43210</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon">📍</div>
+
+                <div>
+                    <label>ADDRESS</label>
+                    <p>UrbanRise Headquarters</p>
+                    <p>MG Road, Kochi</p>
+                    <p>Kerala, India</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon">🕒</div>
+
+                <div>
+                    <label>BUSINESS HOURS</label>
+                    <p>Mon – Sat • 9:00 AM – 8:00 PM</p>
+                </div>
+            </div>
+
+            <div class="status-box">
+                ● CURRENTLY OPEN
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FORM -->
+
+    <section class="message-section">
+
+        <div class="message-card">
+
+            <h2>
+                Send Us a <span>Message</span>
+            </h2>
+
+            <p class="sub-text">
+                Fill in the details and we'll be in touch shortly.
+            </p>
+
+            <hr />
+
+            <div class="form-grid">
+
+                <div>
+                    <label>FULL NAME *</label>
+                    <input
+                        type="text"
+                        name="name"
+                        onchange={handleChange}
+                        placeholder="Your full name"
+                    />
+                </div>
+
+                <div>
+                    <label>EMAIL ADDRESS *</label>
+                    <input
+                        type="email"
+                        name="email"
+                        onchange={handleChange}
+                        placeholder="your@email.com"
+                    />
+                </div>
+
+                <div>
+                    <label>PHONE NUMBER</label>
+                    <input
+                        type="text"
+                        name="phone"
+                        onchange={handleChange}
+                        placeholder="+91 XXXXX XXXXX"
+                    />
+                </div>
+
+                <div>
+                    <label>ENQUIRY TYPE</label>
+
+                    <select
+                        name="type"
+                        onchange={handleChange}>
+
+                        <option value="">
+                            Select type
+                        </option>
+
+                        <option>
+                            Property Purchase
+                        </option>
+
+                        <option>
+                            Site Visit
+                        </option>
+
+                        <option>
+                            Investment
+                        </option>
+
+                        <option>
+                            General Enquiry
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div>
+                    <label>PREFERRED LOCATION</label>
+
+                    <input
+                        type="text"
+                        name="location"
+                        onchange={handleChange}
+                        placeholder="e.g. Mumbai, Bangalore, Kochi"
+                    />
+                </div>
+
+                <div>
+                    <label>MESSAGE</label>
+
+                    <textarea
+                        name="message"
+                        rows="5"
+                        onchange={handleChange}
+                        placeholder="Tell us about your requirement">
+                    </textarea>
+                </div>
+
+            </div>
+
+            <button
+                class="send-btn"
+                onclick={handleSubmit}>
+
+                ✦ SEND MESSAGE
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- OFFICE LOCATION -->
+
+    <section class="office-section">
+
+        <div class="section-title">
+            OFFICE LOCATION
+        </div>
+
+        <div class="office-card">
+
+            <h2>
+                UrbanRise Headquarters
+            </h2>
+
+            <p>MG Road</p>
+            <p>Kochi, Kerala</p>
+            <p>India — 682016</p>
+
+            <a
+                href="https://maps.google.com"
+                target="_blank">
+
+                📍 FIND US ON MAP →
+
+            </a>
+
+            <div class="hours-grid">
+
+                <div>MONDAY</div>
+                <div>9:00 AM – 8:00 PM</div>
+
+                <div>TUESDAY</div>
+                <div>9:00 AM – 8:00 PM</div>
+
+                <div>WEDNESDAY</div>
+                <div>9:00 AM – 8:00 PM</div>
+
+                <div>THURSDAY</div>
+                <div>9:00 AM – 8:00 PM</div>
+
+                <div>FRIDAY</div>
+                <div>9:00 AM – 8:00 PM</div>
+
+                <div>SATURDAY</div>
+                <div>9:00 AM – 8:00 PM</div>
+
+                <div>SUNDAY</div>
+                <div>Closed</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</template>
