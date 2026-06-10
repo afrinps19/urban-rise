@@ -1,5 +1,7 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, wire } from 'lwc';
 import createLead from '@salesforce/apex/urbanenquiry.createLead';
+import getProperties from '@salesforce/apex/urbanenquiry.getProperties';
+
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class UrbanRiseContact extends LightningElement {
@@ -7,6 +9,27 @@ export default class UrbanRiseContact extends LightningElement {
     fullName = '';
     phone = '';
     email = '';
+    propertyId = '';
+
+    propertyOptions = [];
+
+    @wire(getProperties)
+    wiredProperties({ error, data }) {
+
+        if (data) {
+
+            this.propertyOptions = data.map(property => {
+                return {
+                    label: property.Name,
+                    value: property.Id
+                };
+            });
+
+        } else if (error) {
+
+            console.error('Property Error:', error);
+        }
+    }
 
     handleName(event) {
         this.fullName = event.target.value;
@@ -20,6 +43,10 @@ export default class UrbanRiseContact extends LightningElement {
         this.email = event.target.value;
     }
 
+    handleProperty(event) {
+        this.propertyId = event.detail.value;
+    }
+
     async handleSubmit() {
 
         try {
@@ -27,7 +54,8 @@ export default class UrbanRiseContact extends LightningElement {
             if (
                 !this.fullName ||
                 !this.phone ||
-                !this.email    
+                !this.email ||
+                !this.propertyId
             ) {
 
                 this.dispatchEvent(
@@ -41,15 +69,11 @@ export default class UrbanRiseContact extends LightningElement {
                 return;
             }
 
-            console.log('Submitting form...');
-            console.log('Name:', this.fullName);
-            console.log('Phone:', this.phone);
-            console.log('Email:', this.email);
-
             const leadId = await createLead({
                 fullName: this.fullName,
                 phone: this.phone,
-                email: this.email
+                email: this.email,
+                propertyId: this.propertyId
             });
 
             console.log('Lead Created:', leadId);
@@ -65,12 +89,7 @@ export default class UrbanRiseContact extends LightningElement {
             this.fullName = '';
             this.phone = '';
             this.email = '';
-
-            const inputs = this.template.querySelectorAll('input');
-
-            inputs.forEach(input => {
-                input.value = '';
-            });
+            this.propertyId = '';
 
         } catch (error) {
 

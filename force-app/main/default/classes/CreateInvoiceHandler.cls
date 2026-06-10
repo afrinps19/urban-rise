@@ -50,7 +50,7 @@ public class CreateInvoiceHandler {
 
                     inv.Name = 'INV-' + booking.Name;
                     inv.Booking__c = booking.Id;
-                    inv.Invoice_Amount__c = prop.Price_Per_Unit__c;
+                    inv.Invoice_Amount__c = prop.Price_Per_Unit__c*1.13;
                     inv.Due_Date__c = booking.Booking_Dates__c.addDays(7);
                     inv.Status__c = 'Pending';
 

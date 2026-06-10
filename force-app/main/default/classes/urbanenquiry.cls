@@ -1,17 +1,22 @@
 public with sharing class urbanenquiry {
 
+    @AuraEnabled(cacheable=true)
+    public static List<Property__c> getProperties() {
+
+        return [
+            SELECT Id, Name
+            FROM Property__c
+            ORDER BY Name
+        ];
+    }
+
     @AuraEnabled
     public static Id createLead(
         String fullName,
         String phone,
-        String email
-    ){
-
-
-        System.debug('******** APEX METHOD CALLED ********');
-        System.debug('Full Name = ' + fullName);
-        System.debug('Phone = ' + phone);
-        System.debug('Email = ' + email);
+        String email,
+        Id propertyId
+    ) {
 
         Lead__c leadRecord = new Lead__c();
 
@@ -21,9 +26,9 @@ public with sharing class urbanenquiry {
         leadRecord.Email__c = email;
         leadRecord.Status__c = 'New';
 
-        insert leadRecord;
+        leadRecord.property__c = propertyId;
 
-        System.debug('Lead Created: ' + leadRecord.Id);
+        insert leadRecord;
 
         return leadRecord.Id;
     }

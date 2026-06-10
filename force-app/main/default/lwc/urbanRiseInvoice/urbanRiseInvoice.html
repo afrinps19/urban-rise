@@ -1,0 +1,331 @@
+<template>
+
+    <template if:true={invoice}>
+
+        <div class="invoice-wrapper">
+
+            <!-- HEADER -->
+
+            <div class="invoice-header">
+
+                <div class="company-section">
+
+                    <div class="logo-box">
+                        U
+                    </div>
+
+                    <div>
+
+                        <h1>
+                            UrbanRise Realty
+                        </h1>
+
+                        <p>
+                            Premium Real Estate • India
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="paid-badge">
+
+                    ✓ Paid
+
+                </div>
+
+            </div>
+
+            <!-- TOP DETAILS -->
+
+            <div class="top-details">
+
+                <div>
+
+                    <span>
+                        Invoice Number
+                    </span>
+
+                    <h2>
+                        {invoice.invoiceNumber}
+                    </h2>
+
+                </div>
+
+                <div class="date-section">
+
+                    <span>
+                        Issue Date
+                    </span>
+
+                    <h3>
+                        {today}
+                    </h3>
+
+                    <span class="due">
+
+                        Due Date
+
+                    </span>
+
+                    <h3>
+                        {invoice.dueDate}
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <!-- FROM / TO -->
+
+            <div class="address-grid">
+
+                <div class="address-card">
+
+                    <h4>
+                        FROM
+                    </h4>
+
+                    <h2>
+                        UrbanRise Realty Pvt. Ltd.
+                    </h2>
+
+                    <p>
+                        MG Road, Kochi
+                    </p>
+
+                    <p>
+                        Kerala – 682016
+                    </p>
+
+                </div>
+
+                <div class="address-card">
+
+                    <h4>
+                        BILLED TO
+                    </h4>
+
+                    <h2>
+                        {invoice.buyerName}
+                    </h2>
+
+                    <p>
+                        {invoice.location}
+                    </p>
+
+                    <p>
+                        {invoice.buyerEmail}
+                    </p>
+
+                    <p>
+                        {invoice.buyerPhone}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- PURCHASE DETAILS -->
+
+            <div class="section-heading">
+
+                PURCHASE DETAILS
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Description</th>
+
+                        <th>Qty</th>
+
+                        <th>Rate</th>
+
+                        <th>Amount</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+
+                            <strong>
+                                {invoice.propertyName}
+                            </strong>
+
+                            <br/>
+
+                            {invoice.location}
+
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            ₹ {invoice.propertyPrice}
+                        </td>
+
+                        <td>
+                            ₹ {invoice.propertyPrice}
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            GST (18%)
+
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            ₹ {invoice.gstAmount}
+                        </td>
+
+                        <td>
+                            ₹ {invoice.gstAmount}
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            Discount (5%)
+
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            - ₹ {invoice.discountAmount}
+                        </td>
+
+                        <td>
+                            - ₹ {invoice.discountAmount}
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <!-- TOTAL -->
+
+            <div class="total-paid">
+
+                <span>
+
+                    Total Amount Paid
+
+                </span>
+
+                <h1>
+
+                    ₹ {invoice.invoiceAmount}
+
+                </h1>
+
+            </div>
+
+            <!-- PAYMENT INFO -->
+
+            <div class="payment-card">
+
+                <h3>
+
+                    PAYMENT INFORMATION
+
+                </h3>
+
+                <div class="payment-grid">
+
+                    <div>
+
+                        <span>
+                            Method
+                        </span>
+
+                        <strong>
+                            Bank Transfer
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Paid On
+                        </span>
+
+                        <strong>
+                            {today}
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Status
+                        </span>
+
+                        <strong class="confirmed">
+
+                            Confirmed
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+
+            <div class="invoice-footer">
+
+                <div>
+
+                    Thank you for choosing UrbanRise Realty.
+                    <br/>
+
+                    For queries:
+                    support@urbanrise.com
+
+                </div>
+
+                <div class="footer-brand">
+
+                    UrbanRise Realty
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </template>
+
+</template>

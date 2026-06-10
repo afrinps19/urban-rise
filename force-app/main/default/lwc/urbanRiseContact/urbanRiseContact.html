@@ -3,14 +3,12 @@
     <section class="contact-section">
 
         <div class="section-heading">
-            <span>◆</span>
-            <span>ENQUIRY</span>
-            <span>◆</span>
+            <div class="line"></div>
+            <span>◆ CONTACT INFORMATION ◆</span>
+            <div class="line"></div>
         </div>
 
         <div class="contact-container">
-
-            <!-- Left Side -->
 
             <div class="contact-info">
 
@@ -18,7 +16,6 @@
 
                 <div class="info-item">
                     <div class="icon-box">☎</div>
-
                     <div>
                         <div class="label">PHONE</div>
                         <p>+91 98765 43210</p>
@@ -28,16 +25,31 @@
 
                 <div class="info-item">
                     <div class="icon-box">✉</div>
-
                     <div>
                         <div class="label">EMAIL</div>
-                        <p>concierge@urbanriserealty.in</p>
+                        <p>support@urbanrise.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon-box">🏢</div>
+                    <div>
+                        <div class="label">HEAD OFFICE</div>
+                        <p>Lulu Cyber Tower,5th Floor</p>
+                        <p>MG Road, Kochi</p>
+                        <p>Kerala, India – 280751</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon-box">🕒</div>
+                    <div>
+                        <div class="label">WORKING HOURS</div>
+                        <p>Mon – Sat, 9:00 AM – 8:00 PM</p>
                     </div>
                 </div>
 
             </div>
-
-            <!-- Right Side -->
 
             <div class="enquiry-form">
 
@@ -63,6 +75,14 @@
                     value={email}
                     onchange={handleEmail}
                 />
+
+                <lightning-combobox
+                    name="property"
+                    placeholder="Select Property"
+                    options={propertyOptions}
+                    value={propertyId}
+                    onchange={handleProperty}>
+                </lightning-combobox>
 
                 <button onclick={handleSubmit}>
                     REQUEST VIEWING

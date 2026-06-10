@@ -1,0 +1,302 @@
+.invoice-wrapper{
+
+    max-width:1100px;
+    margin:auto;
+
+    background:#faf8f3;
+
+    font-family:'Segoe UI',sans-serif;
+
+    color:#2b2b2b;
+
+    border-radius:12px;
+
+    overflow:hidden;
+}
+
+/* HEADER */
+
+.invoice-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px;
+}
+
+.company-section{
+
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.logo-box{
+
+    width:42px;
+    height:42px;
+
+    background:#a88743;
+
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:4px;
+
+    font-weight:bold;
+}
+
+.company-section h1{
+
+    margin:0;
+    font-size:32px;
+}
+
+.company-section p{
+
+    color:#777;
+}
+
+.paid-badge{
+
+    background:#edf8ef;
+
+    color:#2c7f46;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    font-weight:600;
+}
+
+/* TOP */
+
+.top-details{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:0 30px 30px;
+
+    border-bottom:1px solid #ddd;
+}
+
+.top-details span{
+
+    color:#a88743;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+}
+
+.top-details h2{
+
+    color:#a88743;
+}
+
+.date-section{
+
+    text-align:right;
+}
+
+.due{
+
+    margin-top:10px;
+    display:block;
+}
+
+/* CARDS */
+
+.address-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+    padding:25px;
+}
+
+.address-card{
+
+    background:white;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    padding:25px;
+}
+
+.address-card h4{
+
+    color:#a88743;
+}
+
+/* TABLE */
+
+.section-heading{
+
+    padding:20px 30px;
+
+    color:#a88743;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+}
+
+th{
+
+    text-align:left;
+
+    padding:18px;
+
+    border-bottom:1px solid #ddd;
+}
+
+td{
+
+    padding:18px;
+
+    border-bottom:1px solid #eee;
+}
+
+/* TOTAL */
+
+.total-paid{
+
+    margin:30px;
+
+    border:1px solid #d7c69a;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#f7f3ea;
+}
+
+.total-paid span{
+
+    font-weight:700;
+}
+
+.total-paid h1{
+
+    color:#b89248;
+    font-size:42px;
+}
+
+/* PAYMENT */
+
+.payment-card{
+
+    margin:30px;
+
+    background:white;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    padding:25px;
+}
+
+.payment-card h3{
+
+    color:#a88743;
+
+    margin-bottom:25px;
+}
+
+.payment-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+}
+
+.payment-grid span{
+
+    display:block;
+
+    color:#777;
+
+    margin-bottom:5px;
+}
+
+.confirmed{
+
+    color:#2b7f46;
+}
+
+/* FOOTER */
+
+.invoice-footer{
+
+    background:#202020;
+
+    color:white;
+
+    padding:25px 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.footer-brand{
+
+    color:#b89248;
+
+    font-size:24px;
+}
+
+@media(max-width:768px){
+
+    .address-grid,
+    .payment-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .top-details,
+    .invoice-header,
+    .invoice-footer{
+
+        flex-direction:column;
+
+        gap:20px;
+    }
+}
